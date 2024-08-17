@@ -1,0 +1,39 @@
+body{
+    display:flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wavy 
+{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    overflow:hidden;
+    background-color: aqua;
+}
+
+.wavy::before {
+    font-size: 5em;
+    position:absolute;
+    content: "aaaaaaaaaaaaaa";
+    color: transparent;
+    text-decoration-style: wavy;
+    text-decoration-color: white;
+    text-decoration-line:underline;
+    animation: wave 2s linear infinite;
+}
+
+@keyframes wave 
+{
+    0%
+    {
+        transform:translateX(-1px);
+    }
+    100%
+    {
+        transform:translateX(-57px);
+    }
+}
